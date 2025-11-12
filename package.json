@@ -1,0 +1,37 @@
+{
+  "name": "expense-detective",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "ruler:apply": "pnpm dlx @intellectronica/ruler@latest apply --local-only",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "db:push": "turbo -F @expense-detective/db db:push",
+    "db:studio": "turbo -F @expense-detective/db db:studio",
+    "db:generate": "turbo -F @expense-detective/db db:generate",
+    "db:migrate": "turbo -F @expense-detective/db db:migrate"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "tsdown": "^0.15.5",
+    "@types/node": "^22.13.11"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": ""
+  },
+  "packageManager": "pnpm@10.15.1"
+}
