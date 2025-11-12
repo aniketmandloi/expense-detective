@@ -31,7 +31,9 @@
     "@types/node": "^22.13.11"
   },
   "lint-staged": {
-    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": ""
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": [
+      "bash -c 'pnpm run check-types'"
+    ]
   },
   "packageManager": "pnpm@10.15.1"
 }

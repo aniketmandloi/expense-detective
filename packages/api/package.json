@@ -15,19 +15,20 @@
     "build": "tsdown"
   },
   "devDependencies": {
-    "tsdown": "catalog:",
-    "@expense-detective/config": "workspace:*"
+    "@expense-detective/config": "workspace:*",
+    "tsdown": "catalog:"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@trpc/server": "catalog:",
-    "@trpc/client": "catalog:",
-    "next": "catalog:",
-    "dotenv": "catalog:",
-    "zod": "catalog:",
     "@expense-detective/auth": "workspace:*",
-    "@expense-detective/db": "workspace:*"
+    "@expense-detective/db": "workspace:*",
+    "@trpc/client": "catalog:",
+    "@trpc/server": "catalog:",
+    "dotenv": "catalog:",
+    "next": "catalog:",
+    "tesseract.js": "^6.0.1",
+    "zod": "catalog:"
   }
 }
