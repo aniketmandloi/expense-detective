@@ -1,6 +1,11 @@
 import { z } from "zod";
 import { router, organizationProcedure } from "../index";
-import { db, expensePolicy, expenseCategory, expense } from "@expense-detective/db";
+import {
+  db,
+  expensePolicy,
+  expenseCategory,
+  expense,
+} from "@expense-detective/db";
 import { eq, and } from "drizzle-orm";
 
 const createPolicySchema = z.object({

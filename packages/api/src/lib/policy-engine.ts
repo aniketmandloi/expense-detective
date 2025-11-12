@@ -102,9 +102,9 @@ function evaluatePolicy(
           severity: policy.severity,
           message: `Expense amount (${expenseRecord.currency} ${amount.toFixed(
             2
-          )}) exceeds limit of ${expenseRecord.currency} ${config.maxAmount.toFixed(
-            2
-          )}`,
+          )}) exceeds limit of ${
+            expenseRecord.currency
+          } ${config.maxAmount.toFixed(2)}`,
           action: policy.action,
         };
       }
